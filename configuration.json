@@ -1,0 +1,65 @@
+{
+    "Version": "1.0",
+    "EnableMitigation": true,
+    "MitigationConfiguration": {
+        "FlagsBeforeActivation": {
+            "Description": "How many times a host needs to be flagged before being subjected to mitigation measures.",
+            "Value": 3
+        },
+        "DeflagsBeforeDeactivation": {
+            "Description": "How many times a host has to not be flagged before being exempt from mitigation measures.",
+            "Value": 20
+        }
+    },
+    "Thresholds": {
+        "Description": "Actual deviation needs to be within VALUE units of the global average.",
+        "NrConnections": {
+            "Description": "Refers to the average number of connections across all samples.",
+            "Value": 1.0
+        },
+        "NrPackets": {
+            "Description": "Refers to the average number of packets across all samples.",
+            "Value": 0.4
+        },
+        "PacketSize": {
+            "Description": "Refers to the average size of sent packets.",
+            "Value": 0.2
+        }
+    },
+    "Performance": {
+        "SamplesBeforeInclusion": {
+            "Description": "Number of consecutive samples of host activity required to include host in threshold verification. A value of -1 means that all the samples are required.",
+            "Value": -1
+        },
+        "SamplesBeforeExclusion": {
+            "Description": "Number of consecutive samples of host inactivity required to exclude a host in the threshold verification, once it has been excluded. A value of -1 means all the samples need to be missing.",
+            "Value": -1
+        },
+        "NormalizeSamples": {
+            "Description": "Use raw counter data or normalized data",
+            "Value": true
+        },
+        "MaxSamples": {
+            "Description": "The number of metric samples to keep per host.",
+            "Value": 5
+        }
+    },
+    "EventNames": {
+        "SampleEvent": {
+            "Description": "Name of the event emitted when a new set of metrics has been sampled.",
+            "Value": "MetricsSampled"
+        },
+        "StartMitigation": {
+            "Description": "The name of the event emitted when mitigation has been started for a host.",
+            "Value": "MitigationStart"
+        },
+        "StopMitigation": {
+            "Description": "The name of the event emitted when mitigation has been ceased for a host.",
+            "Value": "MitigationStop"
+        },
+        "ConfigurationReloaded": {
+            "Description": "The name of the event emitted when the configuration has been reloaded.",
+            "Value": "ConfigurationReloaded"
+        }
+    }
+}

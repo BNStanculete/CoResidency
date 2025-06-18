@@ -1,0 +1,4 @@
+# Configuration parsing and handling
+python-magic ~= 0.4.27
+watchdog ~= 6.0.0
+pyee ~= 13.0.0
