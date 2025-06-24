@@ -1,3 +1,9 @@
+"""
+Provides a thread-safe singleton meta class.
+
+This class only ensures that derived classes have a single instance, but does not keep
+said instance alive. It is the responsiblity of the instantiator to keep the instance.
+"""
 from threading import Lock
 
 class SingletonMeta(type):
