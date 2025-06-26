@@ -1,4 +1,4 @@
-# CoResidency
+# HideMe - A tool for hiding VMs from Co-Residency
 
 This repository contains the source code for the co-residency detection tool. The tool was designed as fully customizable, isolated module that cannot be used a standalone. It needs to be integrated with a system which contains at the bare minimum a packet collection mechansim which can sample metrics about the incomming packets.
 
